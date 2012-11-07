@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBCustomerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DBCustomerModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="DBCustomerModel.Store.Customer" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Phone" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Revision" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+  </EntityType>
+</Schema>

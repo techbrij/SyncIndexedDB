@@ -1,0 +1,120 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body
+        {
+            font-size: 62.5%;
+        }
+        
+        label, input
+        {
+            display: block;
+        }
+        
+        input.text
+        {
+            margin-bottom: 12px;
+            padding: .4em;
+            width: 95%;
+        }
+        
+        fieldset
+        {
+            border: 0;
+            margin-top: 25px;
+            padding: 0;
+        }
+        
+        h1
+        {            
+            margin: .6em 0;
+        }
+        
+        table
+        {
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+        
+        table td, table th
+        {
+            border: 1px solid #eee;
+            padding: .6em 10px;
+            text-align: left;
+        }
+        
+        div table td:last-child, table th:last-child
+        {
+            width: 150px;
+        }      
+        
+        .ui-dialog .ui-state-error
+        {
+            padding: .3em;
+        }
+        
+        .validateTips
+        {
+            border: 1px solid transparent;
+            padding: 0.3em;
+        }
+        
+        .invisible
+        {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="~/Scripts/jquery-1.8.2.js"> </script>
+    <script type="text/javascript" src="~/Scripts/jquery-ui-1.9.0.js"> </script>
+    <script type="text/javascript" src="~/Scripts/modernizr-2.6.2.js"> </script>
+    <script type="text/javascript" src="~/Scripts/indexeddb.shim.js"> </script>
+    <script type="text/javascript" src="~/Scripts/Linq2IndexedDB.js"> </script>
+    <script type="text/javascript" src="~/Scripts/Customers.js"> </script>
+</head>
+<body>
+<div style="width:100%;text-align:center;clear:both;padding-top:10px">
+<h1>Syncing IndexedDB Database using ASP.NET Web API
+</h1>
+<span style="font-size:1.5em;">For More Information:</span>
+ <a href="http://techbrij.com" style="font-size:1.6em;font-style:italic;">http://techbrij.com</a>
+    <div id="contentHolder"  style="margin:0 auto;width:460px">
+    </div>
+    
+    <button id="btnAddCustomer">
+        Add Customer</button>
+    <button id="btnDeleteDB">
+        Clear Local DB</button>
+    <button id="btnSyncLocal">
+        Sync Local DB from Server DB</button>
+    <button id="btnSyncServer">
+        Sync Server DB from Local DB</button>
+
+
+    <div id="dialog-form" title="Add new customer">
+        <form>
+        <fieldset>
+            <label for="Id" id="lblId" class="invisible">
+                ID</label>
+            <input type="number" name="Id" id="txtId" value="" class="text ui-widget-content ui-corner-all invisible" />
+            <label for="Name" id="lblName">
+                Name</label>
+            <input type="text" name="Name" id="txtName" class="text ui-widget-content ui-corner-all" />
+            <label for="Email" id="lblEmail">
+                Email</label>
+            <input type="email" name="Email" id="txtEmail" value="" class="text ui-widget-content ui-corner-all" />
+            <label for="Phone" id="lblPhone">
+                Phone</label>
+            <input type="tel" name="Phone" id="txtPhone" value="" class="text ui-widget-content ui-corner-all" />
+        </fieldset>
+        </form>
+    </div>
+  </div> 
+</body>
+</html>
